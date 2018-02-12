@@ -17,7 +17,7 @@ export default [
     ects: 20,
     cv: 'https://google.com',
     email: 'dennis2.neumann@student.uni-siegen.de',
-    location: [23, 58]
+    location: [8.027386, 50.91084]
   },
   {
     id: 3,
