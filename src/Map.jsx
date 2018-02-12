@@ -1,16 +1,29 @@
 import React, { Component } from 'react';
-import ReactMapGL, { Marker } from 'react-map-gl';
+import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 
-class Map extends Component {
+const Map = ReactMapboxGl({
+  accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
+  maxZoom: 6
+});
+
+class MapComponent extends Component {
   render() {
     return (
-      <ReactMapGL latitude={37.78} longitude={-122.41} zoom={8}>
-        <Marker latitude={37.78} longitude={-122.41} offsetLeft={-20} offsetTop={-10}>
-          <div>You are here</div>
+      <Map // eslint-disable-next-line
+        style="mapbox://styles/mapbox/streets-v9"
+        containerStyle={{ height: '100vh', width: '100vw' }}
+        fitBounds={[[-38, 25], [69, 63]]}
+      >
+        <Marker coordinates={[3.6, 50.9]} offset={[0, 60 / 2]}>
+          <img
+            src="https://avatars2.githubusercontent.com/u/10011712?s=460&v=4"
+            alt="Arnaud"
+            style={{ height: 60, width: 60 }}
+          />
         </Marker>
-      </ReactMapGL>
+      </Map>
     );
   }
 }
 
-export default Map;
+export default MapComponent;
