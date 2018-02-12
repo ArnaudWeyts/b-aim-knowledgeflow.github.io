@@ -57,10 +57,11 @@ class MapComponent extends Component {
       >
         {this.renderMarkers()}
         {sm && (
-          <Popup coordinates={sm.location}>
+          <Popup className="popup" coordinates={sm.location}>
             <div>
               <h1>{sm.name}</h1>
               <p>{sm.description}</p>
+              <p>ECTS involvement: {sm.ects}</p>
             </div>
           </Popup>
         )}
