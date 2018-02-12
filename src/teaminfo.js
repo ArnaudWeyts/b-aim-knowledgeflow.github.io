@@ -4,6 +4,7 @@ export default [
     name: 'Arnaud Weyts',
     description:
       "I'm a 20 year old IT student in Ghent. Fueled by coffee in the early mornings to keep up with all the coding. I live in Flanders, Belgium and love to learn new things. My hobbies include stargazing (not just on GitHub) and swimming. I'm also a fond dog person.",
+    ects: 15,
     cv: 'https://google.com',
     email: 'arnaud.weyts@student.odisee.be',
     location: [3.6, 50.9]
@@ -12,7 +13,8 @@ export default [
     id: 2,
     name: 'Dennis Neumann',
     description:
-      "I'm from Germany and study Computer Science in Master. I have programming experiences in Java, C++, general knowledge in C and MySQL. My ECTS involvement is 20 points",
+      "I'm from Germany and study Computer Science in Master. I have programming experiences in Java, C++, general knowledge in C and MySQL.",
+    ects: 20,
     cv: 'https://google.com',
     email: 'dennis2.neumann@student.uni-siegen.de',
     location: [23, 58]
