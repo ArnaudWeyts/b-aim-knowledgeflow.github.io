@@ -1,5 +1,6 @@
 {
   "name": "b-aim-knowledgeflow.github.io",
+  "homepage": "https://b-aim-knowledgeflow.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
