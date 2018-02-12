@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
+
+import images from './img';
+import teaminfo from './teaminfo';
 
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
@@ -7,20 +10,60 @@ const Map = ReactMapboxGl({
 });
 
 class MapComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMember: null
+    };
+  }
+
+  showPopup(p) {
+    this.setState({ selectedMember: p });
+  }
+
+  hidePopup() {
+    this.setState({ selectedMember: null });
+  }
+
+  renderMarkers() {
+    return teaminfo.map(p => {
+      return (
+        <Marker
+          key={p.id}
+          coordinates={p.location}
+          offset={[0, 60 / 2]}
+          onClick={() => this.showPopup(p)}
+          className="marker"
+        >
+          <img
+            src={images.boy}
+            alt={p.name}
+            style={{ height: 60, width: 60 }}
+          />
+        </Marker>
+      );
+    });
+  }
+
   render() {
+    const sm = this.state.selectedMember;
+
     return (
       <Map // eslint-disable-next-line
         style="mapbox://styles/mapbox/streets-v9"
         containerStyle={{ height: '100vh', width: '100vw' }}
         fitBounds={[[-38, 25], [69, 63]]}
+        onMouseDown={() => this.hidePopup()}
       >
-        <Marker coordinates={[3.6, 50.9]} offset={[0, 60 / 2]}>
-          <img
-            src="https://avatars2.githubusercontent.com/u/10011712?s=460&v=4"
-            alt="Arnaud"
-            style={{ height: 60, width: 60 }}
-          />
-        </Marker>
+        {this.renderMarkers()}
+        {sm && (
+          <Popup coordinates={sm.location}>
+            <div>
+              <h1>{sm.name}</h1>
+              <p>{sm.description}</p>
+            </div>
+          </Popup>
+        )}
       </Map>
     );
   }
