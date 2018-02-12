@@ -14,6 +14,7 @@ GH_USERMAIL="arnaud.weyts@gmail.com"
 
 # set your build commands here
 function doCompile {
+  echo "REACT_APP_MAPBOXACCESSTOKEN=${REACT_APP_MAPBOXACESSTOKEN}" > .env
   yarn build
 }
 
@@ -25,32 +26,36 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]
 fi
 
 # Save some useful information
-REPO=`git config remote.origin.url`
-SHA=`git rev-parse --verify HEAD`
+REPO=$(git config remote.origin.url)
+SHA=$(git rev-parse --verify HEAD)
 
-# Clone the existing gh-pages for this repo into ./build
-# Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deploy)
+# Clone repository
 git clone $REPO $DIRECTORY
 cd $DIRECTORY
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-cd ..
-
-# Clean out existing contents
-rm -rf $DIRECTORY/**/* || exit 0
-
-# Run our compile script
-doCompile
-
-# Now let's go have some fun with the cloned repo
-cd $DIRECTORY
 git config user.name $GH_USERNAME
 git config user.email $GH_USERMAIL
 
-# Add new files
+# Move our .git folder too safety!
+mv .git ../.git2
+
+cd ..
+
+# Run our compile script (This sometimes completely cleanes out the build directory,
+# hence why we moved our .git folder too safety
+doCompile
+
+# Move our .git back to where it belongs
+mv .git2 $DIRECTORY/.git
+
+# Now let's go have some fun with the cloned repo
+cd $DIRECTORY
+
+# stage new files & deleted files
 git add -A
 
 # If there are no changes to the compiled build (e.g. this is a README update) then just bail.
-if [[ -z `git diff --cached --exit-code` ]]; then
+if [[ -z $(git diff --cached --exit-code) ]]; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
