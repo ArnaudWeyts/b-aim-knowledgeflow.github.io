@@ -6,7 +6,7 @@ export default [
       "I'm a 20 year old IT student in Ghent. Fueled by coffee in the early mornings to keep up with all the coding. I live in Flanders, Belgium and love to learn new things. My hobbies include stargazing (not just on GitHub) and swimming. I'm also a fond dog person.",
     ects: 15,
     cv: 'https://google.com',
-    email: 'arnaud.weyts@student.odisee.be',
+    email: ['arnaud.weyts@student.odisee.be'],
     location: [3.6, 50.9]
   },
   {
@@ -16,14 +16,27 @@ export default [
       "I'm from Germany and study Computer Science in Master. I have programming experiences in Java, C++, general knowledge in C and MySQL.",
     ects: 20,
     cv: 'https://google.com',
-    email: 'dennis2.neumann@student.uni-siegen.de',
+    email: ['dennis2.neumann@student.uni-siegen.de'],
     location: [8.027386, 50.91084]
   },
   {
     id: 3,
-    name: 'Arnaud Weyts',
-    description: 'Test description',
+    name: 'Ana Rita Lage Moreira Pereira',
+    description:
+      'Hello! I am Rita and I am 21 years old. I live at the North of Portugal. I have a degree in Tourism Management. At the moment, I am studying Marketing. I really like Marketing since when I was younger, principally Touristic Marketing, that\'s why I am doing this Master to complete my studies. I have done a training in  "Marketing & Sales" department at Dom Henrique in Porto Hotel, during two months. In adition, I am confortable with Internacional Marketing, Innovation and Strategic Planning.',
+    ects: '/',
     cv: 'https://google.com',
-    location: [-5, 53.9]
+    email: ['a033157@ismai.pt', 'ritz_pereira@hotmail.com'],
+    location: [-8.6291, 41.1579]
+  },
+  {
+    id: 4,
+    name: 'Rawand Farhad',
+    description:
+      'Java , C#, Oracle ,MySQL. Plus had experience using the other programming languages ,(web//PHP,JS ,etc)',
+    ects: 5,
+    cv: 'https://google.com',
+    email: ['rawand.3115014011@uhd.edu.iq', 'rawand.farhad@gmail.com'],
+    location: [45.4966966, 35.5292404]
   }
 ];
