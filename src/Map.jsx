@@ -36,7 +36,7 @@ class MapComponent extends Component {
           className="marker"
         >
           <img
-            src={images.boy}
+            src={images[p.id]}
             alt={p.name}
             style={{ height: 60, width: 60 }}
           />
