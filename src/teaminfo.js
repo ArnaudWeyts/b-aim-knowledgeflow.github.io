@@ -78,10 +78,11 @@ export default [
   {
     id: 9,
     name: 'Georgios Peirasmakis',
-    description: 'Informatics Engineering',
+    description:
+      "I'm from Greece and currently studying for my Bachelors on Informatics Engineering . I mostly worked on Pattern Recognition/Computer Vision/Neural Networks on Matlab and have general knowledge on Javascript,C,C# and Java (not my field of expertise).",
     ects: 20,
     cv: 'https://google.com',
-    email: ['tp4073@edu.teicrete.gr'],
+    email: ['tp4073@edu.teicrete.gr', 'peirasm-george@hotmail.com'],
     location: [25.1442, 35.3387]
   }
 ];
