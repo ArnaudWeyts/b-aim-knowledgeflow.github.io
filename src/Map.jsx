@@ -62,6 +62,13 @@ class MapComponent extends Component {
               <h1>{sm.name}</h1>
               <p>{sm.description}</p>
               <p>ECTS involvement: {sm.ects}</p>
+              {sm.email.map(m => {
+                return (
+                  <p>
+                    <a href={`mailto:${m}`}>{m}</a>
+                  </p>
+                );
+              })}
             </div>
           </Popup>
         )}
