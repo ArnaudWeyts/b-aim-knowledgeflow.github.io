@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
+import ReactMapboxGl, { Cluster, Marker, Popup } from 'react-mapbox-gl';
 
 import images from './img';
 import teaminfo from './teaminfo';
 
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
-  maxZoom: 6
+  maxZoom: 7
 });
 
 class MapComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedMember: null
+      selectedMember: null,
+      fitBounds: [[-38, 25], [69, 63]]
     };
+  }
+
+  clusterMarker(coordinates, pointCount) {
+    return (
+      <Marker
+        key={coordinates}
+        coordinates={coordinates}
+        offset={[0, 60 / 2]}
+        className="marker"
+        s
+      >
+        <img
+          src={images.team}
+          alt="team icon"
+          style={{ height: 60, width: 60 }}
+        />
+      </Marker>
+    );
   }
 
   showPopup(p) {
@@ -52,10 +71,12 @@ class MapComponent extends Component {
       <Map // eslint-disable-next-line
         style="mapbox://styles/mapbox/streets-v9"
         containerStyle={{ height: '100vh', width: '100vw' }}
-        fitBounds={[[-38, 25], [69, 63]]}
+        fitBounds={this.state.fitBounds}
         onMouseDown={() => this.hidePopup()}
       >
-        {this.renderMarkers()}
+        <Cluster ClusterMarkerFactory={this.clusterMarker} zoomOnClick={true}>
+          {this.renderMarkers()}
+        </Cluster>
         {sm && (
           <Popup className="popup" coordinates={sm.location}>
             <div>
