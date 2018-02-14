@@ -13,8 +13,17 @@ class App extends Component {
     super(props);
     this.state = {
       members,
+      selectedMember: null,
       map: null
     };
+  }
+
+  onSelectMember(p) {
+    this.setState({ selectedMember: p });
+  }
+
+  onUnselectMember() {
+    this.setState({ selectedMember: null });
   }
 
   onZoomMember(location) {
@@ -27,14 +36,21 @@ class App extends Component {
   }
 
   render() {
-    const { members } = this.state;
+    const { members, selectedMember } = this.state;
     return (
       <div className="App">
         <SideBar
           members={members}
           zoomMember={location => this.onZoomMember(location)}
+          selectMember={m => this.onSelectMember(m)}
         />
-        <Map members={members} setMap={map => this.setState({ map })} />
+        <Map
+          members={members}
+          setMap={map => this.setState({ map })}
+          selectedMember={selectedMember}
+          selectMember={m => this.onSelectMember(m)}
+          unselectMember={() => this.onUnselectMember()}
+        />
       </div>
     );
   }

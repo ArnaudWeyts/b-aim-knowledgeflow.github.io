@@ -12,7 +12,6 @@ class MapComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedMember: null,
       fitBounds: [[-38, 25], [69, 63]]
     };
 
@@ -37,14 +36,6 @@ class MapComponent extends Component {
     );
   }
 
-  showPopup(p) {
-    this.setState({ selectedMember: p });
-  }
-
-  hidePopup() {
-    this.setState({ selectedMember: null });
-  }
-
   renderMarkers() {
     return this.props.members.map(p => {
       return (
@@ -52,7 +43,7 @@ class MapComponent extends Component {
           key={p.id}
           coordinates={p.location}
           offset={[0, 60 / 2]}
-          onClick={() => this.showPopup(p)}
+          onClick={() => this.props.selectMember(p)}
           className="marker"
         >
           <img
@@ -66,14 +57,14 @@ class MapComponent extends Component {
   }
 
   render() {
-    const sm = this.state.selectedMember;
+    const sm = this.props.selectedMember;
 
     return (
       <Map // eslint-disable-next-line
         style="mapbox://styles/mapbox/streets-v9"
         className="map"
         fitBounds={this.state.fitBounds}
-        onMouseDown={() => this.hidePopup()}
+        onMouseDown={this.props.unselectMember}
         onStyleLoad={map => this.props.setMap(map)}
       >
         <Cluster ClusterMarkerFactory={this.clusterMarker} zoomOnClick={true}>
