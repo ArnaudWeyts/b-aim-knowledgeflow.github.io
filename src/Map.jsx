@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { Cluster, Marker, Popup } from 'react-mapbox-gl';
 
 import images from './img';
-import teaminfo from './teaminfo';
 
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
@@ -16,6 +15,8 @@ class MapComponent extends Component {
       selectedMember: null,
       fitBounds: [[-38, 25], [69, 63]]
     };
+
+    this.renderMarkers.bind(this);
   }
 
   clusterMarker(coordinates, pointCount) {
@@ -45,7 +46,7 @@ class MapComponent extends Component {
   }
 
   renderMarkers() {
-    return teaminfo.map(p => {
+    return this.props.members.map(p => {
       return (
         <Marker
           key={p.id}
@@ -70,9 +71,10 @@ class MapComponent extends Component {
     return (
       <Map // eslint-disable-next-line
         style="mapbox://styles/mapbox/streets-v9"
-        containerStyle={{ height: '100vh', width: '100vw' }}
+        className="map"
         fitBounds={this.state.fitBounds}
         onMouseDown={() => this.hidePopup()}
+        onStyleLoad={map => this.props.setMap(map)}
       >
         <Cluster ClusterMarkerFactory={this.clusterMarker} zoomOnClick={true}>
           {this.renderMarkers()}
