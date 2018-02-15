@@ -3,7 +3,8 @@ import React from 'react';
 export default ({ members, zoomMember, selectMember }) => {
   return (
     <div className="sidebar">
-      <ul>
+      <h2 className="title">Meet the team!</h2>
+      <ul className="list">
         {members.map(m => {
           return (
             <li
@@ -12,6 +13,7 @@ export default ({ members, zoomMember, selectMember }) => {
                 selectMember(m);
               }}
               key={m.id}
+              className="list-item"
             >
               {m.name}
             </li>

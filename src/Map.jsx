@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactMapboxGl, { Cluster, Marker, Popup } from 'react-mapbox-gl';
 
 import images from './img';
+import resumes from './resumes';
 
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
@@ -83,6 +84,13 @@ class MapComponent extends Component {
                   </p>
                 );
               })}
+              <p>
+                {resumes[sm.id - 1] && (
+                  <a target="_blank" href={resumes[sm.id - 1]}>
+                    CV
+                  </a>
+                )}
+              </p>
             </div>
           </Popup>
         )}
