@@ -86,6 +86,11 @@
   background: #546e7a;
 }
 
+.clear-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .map {
   flex-grow: 1;
   height: 100vh;

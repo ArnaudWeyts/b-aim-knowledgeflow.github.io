@@ -1,5 +1,7 @@
 import React from 'react';
 
+import images from './img';
+
 export default ({ members, zoomMember, selectMember }) => {
   return (
     <div className="sidebar">
@@ -20,6 +22,12 @@ export default ({ members, zoomMember, selectMember }) => {
           );
         })}
       </ul>
+      <a
+        className="list-item clear-link"
+        href="https://github.com/B-AIM-KnowledgeFlow/b-aim-knowledgeflow.github.io"
+      >
+        <img src={images.github} alt="github icon" />&nbsp; View on GitHub
+      </a>
     </div>
   );
 };

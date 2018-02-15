@@ -1,6 +1,7 @@
 import boy from './boy.png';
 import girl from './girl.png';
 import team from './team.png';
+import github from './github-circle.svg';
 
 export default {
   1: girl,
@@ -12,5 +13,6 @@ export default {
   7: boy,
   8: boy,
   9: boy,
-  team: team
+  team,
+  github
 };
