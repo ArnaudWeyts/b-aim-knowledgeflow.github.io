@@ -30,10 +30,9 @@ class App extends Component {
 
   onZoomMember(location) {
     const { map } = this.state;
-    map.flyTo({
-      center: location,
-      zoom: 7
-    });
+    if (map) {
+      map.flyTo({ center: location, zoom: 7 });
+    }
   }
 
   render() {
