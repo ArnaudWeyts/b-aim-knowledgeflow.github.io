@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import ReactMapboxGl, { Cluster, Marker, Popup } from 'react-mapbox-gl';
+import ReactMapboxGl, {
+  ZoomControl,
+  Cluster,
+  Marker,
+  Popup
+} from 'react-mapbox-gl';
 
 import images from './img';
 import resumes from './resumes';
@@ -79,6 +84,7 @@ class MapComponent extends Component {
         onMouseDown={this.props.unselectMember}
         onStyleLoad={map => this.props.setMap(map)}
       >
+        <ZoomControl />
         <Cluster ClusterMarkerFactory={this.clusterMarker} zoomOnClick={true}>
           {this.renderMarkers()}
         </Cluster>
