@@ -21,8 +21,21 @@
   margin: 0;
 }
 
-.popup .mapboxgl-popup-tip {
+/* UGLY CSS PLS DONT LOOK */
+
+.mapboxgl-popup-anchor-left > .mapboxgl-popup-tip {
+  border-right-color: #455a64 !important;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #455a64 !important;
+}
+
+.mapboxgl-popup-anchor-bottom > .mapboxgl-popup-tip {
   border-top-color: #455a64 !important;
+}
+.mapboxgl-popup-anchor-right > .mapboxgl-popup-tip {
+  border-left-color: #455a64 !important;
 }
 
 .popup .mapboxgl-popup-content {
