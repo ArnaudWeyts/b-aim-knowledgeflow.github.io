@@ -34,7 +34,7 @@ export default [
     ects: 5,
     cv: 'https://google.com',
     email: ['ekaterinam.russia@gmail.com'],
-    location: [37.6173, 55.7558]
+    location: [15.4098, 47.0693]
   },
   {
     id: 5,
