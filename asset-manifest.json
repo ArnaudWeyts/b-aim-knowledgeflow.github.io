@@ -1,12 +1,13 @@
 {
   "main.css": "static/css/main.eef9f1ba.css",
   "main.css.map": "static/css/main.eef9f1ba.css.map",
-  "main.js": "static/js/main.6a60990f.js",
-  "main.js.map": "static/js/main.6a60990f.js.map",
-  "static/media/1.pdf": "static/media/1.6706fa81.pdf",
-  "static/media/5.pdf": "static/media/5.cb8dd4f1.pdf",
+  "main.js": "static/js/main.edd5474c.js",
+  "main.js.map": "static/js/main.edd5474c.js.map",
+  "static/media/arnaud.pdf": "static/media/arnaud.cb8dd4f1.pdf",
   "static/media/boy.png": "static/media/boy.7cc7a630.png",
   "static/media/girl.png": "static/media/girl.0f2d8a9c.png",
+  "static/media/jonas.pdf": "static/media/jonas.20758e9c.pdf",
+  "static/media/kat.pdf": "static/media/kat.041c1f9e.pdf",
   "static/media/open-sans-latin-300.woff": "static/media/open-sans-latin-300.521d17bc.woff",
   "static/media/open-sans-latin-300.woff2": "static/media/open-sans-latin-300.60c86674.woff2",
   "static/media/open-sans-latin-300italic.woff": "static/media/open-sans-latin-300italic.8a648ff3.woff",
@@ -27,5 +28,6 @@
   "static/media/open-sans-latin-800.woff2": "static/media/open-sans-latin-800.aaeffaf2.woff2",
   "static/media/open-sans-latin-800italic.woff": "static/media/open-sans-latin-800italic.79b58175.woff",
   "static/media/open-sans-latin-800italic.woff2": "static/media/open-sans-latin-800italic.6b3973ff.woff2",
+  "static/media/rita.pdf": "static/media/rita.6706fa81.pdf",
   "static/media/team.png": "static/media/team.f74c8ed9.png"
 }
