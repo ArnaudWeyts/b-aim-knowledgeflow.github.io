@@ -21,6 +21,23 @@
   margin: 0;
 }
 
+.popup .mapboxgl-popup-tip {
+  border-top-color: #455a64 !important;
+}
+
+.popup .mapboxgl-popup-content {
+  background: #455a64;
+  color: #fff;
+}
+
+.popup a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5em;
+  background-color: #546e7a;
+  border-radius: 3px;
+}
+
 .list-item {
   font-size: 18px;
   height: 60px;
