@@ -78,7 +78,7 @@ class MapComponent extends Component {
               <p>ECTS involvement: {sm.ects}</p>
               {sm.email.map(m => {
                 return (
-                  <p>
+                  <p key={m}>
                     <a href={`mailto:${m}`}>{m}</a>
                   </p>
                 );

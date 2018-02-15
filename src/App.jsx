@@ -32,7 +32,6 @@ class App extends Component {
       center: location,
       zoom: 7
     });
-    console.log(this.state.map, location);
   }
 
   render() {
