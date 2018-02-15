@@ -10,14 +10,14 @@ import images from './img';
 import resumes from './resumes';
 
 const popupOffsets = {
-  top: [0, 30],
-  'top-left': [30, 30],
-  'top-right': [-30, 30],
-  bottom: [0, -30],
-  'bottom-left': [30, -30],
-  'bottom-right': [-30, -30],
-  left: [30, 0],
-  right: [-30, 0]
+  top: [0, 15],
+  'top-left': [15, 0],
+  'top-right': [-15, 0],
+  bottom: [0, -100],
+  'bottom-left': [0, -100],
+  'bottom-right': [0, -100],
+  left: [50, -50],
+  right: [-50, -50]
 };
 
 const Map = ReactMapboxGl({
@@ -40,14 +40,14 @@ class MapComponent extends Component {
       <Marker
         key={coordinates}
         coordinates={coordinates}
-        offset={[0, 60 / 2]}
+        offset={[0, 100 / 2]}
         className="marker"
         s
       >
         <img
           src={images.team}
           alt="team icon"
-          style={{ height: 60, width: 60 }}
+          style={{ height: 100, width: 100 }}
         />
       </Marker>
     );
@@ -59,14 +59,14 @@ class MapComponent extends Component {
         <Marker
           key={p.id}
           coordinates={p.location}
-          offset={[0, 60 / 2]}
+          offset={[0, 15]}
           onClick={() => this.props.selectMember(p)}
           className="marker"
         >
           <img
             src={images[p.id]}
             alt={p.name}
-            style={{ height: 60, width: 60 }}
+            style={{ height: 100, width: 100 }}
           />
         </Marker>
       );
