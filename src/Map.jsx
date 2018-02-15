@@ -96,6 +96,7 @@ class MapComponent extends Component {
           >
             <div>
               <h1>{sm.name}</h1>
+              <p>{sm.uni}</p>
               <p>{sm.description}</p>
               <p>ECTS involvement: {sm.ects}</p>
               {sm.email.map(m => {

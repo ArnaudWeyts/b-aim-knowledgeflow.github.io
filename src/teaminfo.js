@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Ana Rita Lage Moreira Pereira',
-    uni: 'Maia',
+    uni: 'Instituto Universitário da Maia',
     country: 'Portugal',
     description:
       'Hello! I am Rita and I am 21 years old. I live at the North of Portugal. I have a degree in Tourism Management. At the moment, I am studying Marketing. I really like Marketing since when I was younger, principally Touristic Marketing, that\'s why I am doing this Master to complete my studies. I have done a training in  "Marketing & Sales" department at Dom Henrique in Porto Hotel, during two months. In adition, I am confortable with Internacional Marketing, Innovation and Strategic Planning.',
@@ -28,7 +28,7 @@ export default [
     uni: 'Glasgow Caledonian University',
     country: 'Scotland',
     description:
-      'Digital Design, App Design, Web Design , Logo Design, Branding, Augmented Reality, Motion Graphics, Adobe CC Suite',
+      'Digital Design, App Design, Web Design, Logo Design, Branding, Augmented Reality, Motion Graphics, Adobe CC Suite',
     ects: 10,
     cv: 'https://google.com',
     email: ['AROBER221@caledonian.ac.uk'],
@@ -61,6 +61,8 @@ export default [
   {
     id: 6,
     name: 'Dennis Neumann',
+    uni: 'University of Siegen',
+    country: 'Germany',
     description:
       "I'm from Germany and study Computer Science in Master. I have programming experiences in Java, C++, general knowledge in C and MySQL.",
     ects: 20,
@@ -71,7 +73,10 @@ export default [
   {
     id: 7,
     name: 'Jonas König',
-    description: 'Business Informatics',
+    uni: 'Paderborn University',
+    country: 'Germany',
+    description:
+      'Business Informatics, Java, C#, SQL, Business Intelligence/Analytics',
     ects: 10,
     cv: 'https://google.com',
     email: ['jonas.koenig94@yahoo.de'],
@@ -80,6 +85,8 @@ export default [
   {
     id: 8,
     name: 'Rawand Farhad',
+    uni: 'University Of Human Development',
+    country: 'Iraq',
     description:
       'Java , C#, Oracle ,MySQL. Plus had experience using the other programming languages ,(web//PHP,JS ,etc)',
     ects: 5,
@@ -90,6 +97,8 @@ export default [
   {
     id: 9,
     name: 'Georgios Peirasmakis',
+    uni: 'Technological Educational Institute of Crete',
+    country: 'Greece',
     description:
       "I'm from Greece and currently studying for my Bachelors on Informatics Engineering . I mostly worked on Pattern Recognition/Computer Vision/Neural Networks on Matlab and have general knowledge on Javascript,C,C# and Java (not my field of expertise).",
     ects: 20,
