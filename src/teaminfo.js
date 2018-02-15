@@ -2,6 +2,8 @@ export default [
   {
     id: 1,
     name: 'Ana Rita Lage Moreira Pereira',
+    uni: 'Maia',
+    country: 'Portugal',
     description:
       'Hello! I am Rita and I am 21 years old. I live at the North of Portugal. I have a degree in Tourism Management. At the moment, I am studying Marketing. I really like Marketing since when I was younger, principally Touristic Marketing, that\'s why I am doing this Master to complete my studies. I have done a training in  "Marketing & Sales" department at Dom Henrique in Porto Hotel, during two months. In adition, I am confortable with Internacional Marketing, Innovation and Strategic Planning.',
     ects: '/',
@@ -11,6 +13,8 @@ export default [
   },
   {
     id: 2,
+    uni: 'LUCA-Arts',
+    country: 'Belgium',
     name: 'Magalie Fierens',
     description: 'Visual Design / Graphic',
     ects: 9,
@@ -21,7 +25,10 @@ export default [
   {
     id: 3,
     name: 'Ashleigh Robertson',
-    description: 'Graphic Design',
+    uni: 'Glasgow Caledonian University',
+    country: 'Scotland',
+    description:
+      'Digital Design, App Design, Web Design , Logo Design, Branding, Augmented Reality, Motion Graphics, Adobe CC Suite',
     ects: 10,
     cv: 'https://google.com',
     email: ['AROBER221@caledonian.ac.uk'],
@@ -30,7 +37,10 @@ export default [
   {
     id: 4,
     name: 'Katerina Melnikova',
-    description: 'Business in Emerging Markets',
+    uni: 'FH Joanneum',
+    country: 'Austria',
+    description:
+      'My name is Ekaterina Melnikova, I am an Austrian student, but originally came from Russia. Currently, I am doing my Master Degree "Business in Emerging Markets" in Graz, Austria. I have a Bachelor Diploma from Voronezh State University with a major "International Economics". In a project I am responsable for Business part.',
     ects: 5,
     cv: 'https://google.com',
     email: ['ekaterinam.russia@gmail.com'],
@@ -39,6 +49,8 @@ export default [
   {
     id: 5,
     name: 'Arnaud Weyts',
+    uni: 'Odisee',
+    country: 'Belgium',
     description:
       "I'm a 20 year old IT student in Ghent. Fueled by coffee in the early mornings to keep up with all the coding. I live in Flanders, Belgium and love to learn new things. My hobbies include stargazing (not just on GitHub) and swimming. I'm also a fond dog person.",
     ects: 15,

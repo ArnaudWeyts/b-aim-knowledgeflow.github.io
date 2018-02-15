@@ -1,4 +1,6 @@
-import ana from './1.pdf';
-import arnaud from './5.pdf';
+import rita from './rita.pdf';
+import kat from './kat.pdf';
+import arnaud from './arnaud.pdf';
+import jonas from './jonas.pdf';
 
-export default [ana, null, null, null, arnaud, null, null, null, null];
+export default [rita, null, null, kat, arnaud, null, jonas, null, null];
