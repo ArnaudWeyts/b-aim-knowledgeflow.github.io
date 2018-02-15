@@ -23,6 +23,10 @@
 
 /* UGLY CSS PLS DONT LOOK */
 
+.mapboxgl-popup-anchor-bottom {
+  margin-bottom: 30px;
+}
+
 .mapboxgl-popup-anchor-left > .mapboxgl-popup-tip {
   border-right-color: #455a64 !important;
 }
@@ -31,9 +35,26 @@
   border-bottom-color: #455a64 !important;
 }
 
+.mapboxgl-popup-anchor-top-right > .mapboxgl-popup-tip {
+  border-bottom-color: #455a64 !important;
+}
+
+.mapboxgl-popup-anchor-top-left > .mapboxgl-popup-tip {
+  border-bottom-color: #455a64 !important;
+}
+
 .mapboxgl-popup-anchor-bottom > .mapboxgl-popup-tip {
   border-top-color: #455a64 !important;
 }
+
+.mapboxgl-popup-anchor-bottom-right > .mapboxgl-popup-tip {
+  border-top-color: #455a64 !important;
+}
+
+.mapboxgl-popup-anchor-bottom-left > .mapboxgl-popup-tip {
+  border-top-color: #455a64 !important;
+}
+
 .mapboxgl-popup-anchor-right > .mapboxgl-popup-tip {
   border-left-color: #455a64 !important;
 }

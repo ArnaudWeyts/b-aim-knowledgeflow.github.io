@@ -4,6 +4,17 @@ import ReactMapboxGl, { Cluster, Marker, Popup } from 'react-mapbox-gl';
 import images from './img';
 import resumes from './resumes';
 
+const popupOffsets = {
+  top: [0, 30],
+  'top-left': [30, 30],
+  'top-right': [-30, 30],
+  bottom: [0, -30],
+  'bottom-left': [30, -30],
+  'bottom-right': [-30, -30],
+  left: [30, 0],
+  right: [-30, 0]
+};
+
 const Map = ReactMapboxGl({
   accessToken: process.env.REACT_APP_MAPBOXACCESSTOKEN,
   maxZoom: 7
@@ -72,7 +83,11 @@ class MapComponent extends Component {
           {this.renderMarkers()}
         </Cluster>
         {sm && (
-          <Popup className="popup" coordinates={sm.location}>
+          <Popup
+            className="popup"
+            coordinates={sm.location}
+            offset={popupOffsets}
+          >
             <div>
               <h1>{sm.name}</h1>
               <p>{sm.description}</p>
