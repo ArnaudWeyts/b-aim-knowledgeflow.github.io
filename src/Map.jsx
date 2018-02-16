@@ -63,11 +63,7 @@ class MapComponent extends Component {
           onClick={() => this.props.selectMember(p)}
           className="marker"
         >
-          <img
-            src={images[p.id]}
-            alt={p.name}
-            style={{ height: 100, width: 100 }}
-          />
+          <img src={images[p.id]} alt={p.name} style={{ height: 100 }} />
         </Marker>
       );
     });

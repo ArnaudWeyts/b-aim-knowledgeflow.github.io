@@ -1,15 +1,15 @@
 import boy from './boy.png';
 import girl from './girl.png';
 import team from './team.png';
-import Rita from './Rita.svg';
-import Magalie from './Magalie.svg';
-import Ashleigh from './Ashleigh.svg';
-import Katerina from './Katerina.svg';
-import Arnaud from './Arnaud.svg';
-import Dennis from './Dennis.svg';
-import Jonas from './Jonas.svg';
-import Rawand from './Rawand.svg';
-import George from './George.svg';
+import Rita from './Rita.png';
+import Magalie from './Magalie.png';
+import Ashleigh from './Ashleigh.png';
+import Katerina from './Katerina.png';
+import Arnaud from './Arnaud.png';
+import Dennis from './Dennis.png';
+import Jonas from './Jonas.png';
+import Rawand from './Rawand.png';
+import George from './George.png';
 import github from './github-circle.svg';
 
 export default {
